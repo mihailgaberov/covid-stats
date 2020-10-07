@@ -1,4 +1,7 @@
 import React, { FC } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons'
+
 import { DashboardHead, SectionTitle } from 'styles';
 import {
     useAsyncTask,
@@ -9,6 +12,7 @@ import {
 import * as utils from 'app/utils/';
 import Country from 'app/components/common/Country';
 import Global from 'app/components/common/Global';
+
 
 const Dashboard: FC = () => {
     const response = useAsyncTask('https://api.covid19api.com/summary');
@@ -31,9 +35,12 @@ const Dashboard: FC = () => {
 
     return (
         <div className="ashiishme-covid-dashboard">
-            <DashboardHead className="dashboard-header">
+            <DashboardHead>
                 <div className="section-title">
                     <SectionTitle>COVID-19 STATS</SectionTitle>
+                </div>
+                <div className="menu-btn">
+                    <FontAwesomeIcon icon={faCog} />
                 </div>
             </DashboardHead>
 
