@@ -12,11 +12,13 @@ import Global from 'app/components/common/Global';
 
 const Dashboard: FC = () => {
     const response = useAsyncTask('https://api.covid19api.com/summary');
-    const user_country = useUserCountry('https://extreme-ip-lookup.com/json/');
+    const userCountry = useUserCountry('https://extreme-ip-lookup.com/json/');
+    
     let country = utils.filterCountry(
         response?.Countries,
-        user_country?.countryCode
+        userCountry?.countryCode
     );
+    
     const countryProvider: Covid.CountryStats = {
         country: country,
         date: covid_date_format(response?.Date),

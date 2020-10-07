@@ -6,7 +6,7 @@ const useUserCountry = (url: string): any => {
     useEffect(() => {
         const getUserCountry = async (): Promise<void> => {
             const response: any = await httpService({
-                url: url,
+                url
             });
             setCountry(response);
         };
