@@ -1,10 +1,17 @@
 import React, { FC } from 'react';
+import { SettingsContainer, SettingsHead } from 'styles';
 
 const Settings: FC = () => {
     return (
-        <div className="ashiishme-covid-settings">
-         Settings
-        </div>
+        <SettingsContainer>
+            <SettingsHead>
+                <h3>
+                    <span>Settings</span>
+                </h3>
+            </SettingsHead>
+            <div>Colors</div>
+            <div>Typography</div>
+        </SettingsContainer>
     );
 };
 

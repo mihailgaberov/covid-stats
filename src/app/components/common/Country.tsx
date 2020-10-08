@@ -3,8 +3,10 @@ import { UpdatedStats, StatsHead, StatsDetails } from 'styles';
 import Text from './Text';
 import { useCovidCountryContext } from 'app/hooks';
 import * as utils from 'app/utils';
+
 const Country: FC = () => {
     const { country, date } = useCovidCountryContext();
+    
     return (
         <div className="stats-user-country">
             <UpdatedStats className="dashboard-update-status">

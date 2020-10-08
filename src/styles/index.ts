@@ -7,3 +7,10 @@ export {
     StatsHead,
     StatsDetails,
 } from './dashboard';
+
+export {
+    SettingsContainer,
+    SettingsHead
+} from './settings';
+
+
