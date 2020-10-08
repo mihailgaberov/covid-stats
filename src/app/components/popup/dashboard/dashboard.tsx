@@ -1,6 +1,4 @@
 import React, { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons'
 
 import { DashboardHead, SectionTitle } from 'styles';
 import {
@@ -38,9 +36,6 @@ const Dashboard: FC = () => {
             <DashboardHead>
                 <div className="section-title">
                     <SectionTitle>COVID-19 STATS</SectionTitle>
-                </div>
-                <div className="menu-btn">
-                    <FontAwesomeIcon icon={faCog} />
                 </div>
             </DashboardHead>
 
