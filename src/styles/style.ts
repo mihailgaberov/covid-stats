@@ -25,9 +25,6 @@ export const Container = styled.div`
 `;
 
 export const MenuButton = styled.div`
-    width: 16px;
-    float: right;
-    margin-top: 3%;
     cursor: pointer;
     
     :hover {

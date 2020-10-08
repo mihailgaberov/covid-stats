@@ -4,16 +4,21 @@ import { faCog } from '@fortawesome/free-solid-svg-icons'
 
 import { Dashboard } from './components/popup';
 import { Settings } from './components/popup';
-import { Container, MenuButton } from 'styles';
+import { Container, MenuButton, DashboardHead, SectionTitle } from 'styles';
 
 const App: FC = () => {
     const [ settingsOpened, setSettingsOpened ] = useState(false);
 
     return (
         <Container className="ashiishme_covid_container">
-            <MenuButton onClick={() => settingsOpened ? setSettingsOpened(false) : setSettingsOpened(true)}>
-                <FontAwesomeIcon icon={faCog} />
-            </MenuButton>
+            <DashboardHead>
+                <div className="section-title">
+                    <SectionTitle>COVID-19 STATS</SectionTitle>
+                </div>
+                <MenuButton onClick={() => settingsOpened ? setSettingsOpened(false) : setSettingsOpened(true)}>
+                    <FontAwesomeIcon icon={faCog} />
+                </MenuButton>
+            </DashboardHead>
             {settingsOpened ? <Settings /> : <Dashboard />}
         </Container>
     );

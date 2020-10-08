@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 
-import { DashboardHead, SectionTitle } from 'styles';
 import {
     useAsyncTask,
     covidCountryContext,
@@ -33,12 +32,6 @@ const Dashboard: FC = () => {
 
     return (
         <div className="ashiishme-covid-dashboard">
-            <DashboardHead>
-                <div className="section-title">
-                    <SectionTitle>COVID-19 STATS</SectionTitle>
-                </div>
-            </DashboardHead>
-
             <div className="covid-stats">
                 <covidCountryContext.Provider value={countryProvider}>
                     <Country />
