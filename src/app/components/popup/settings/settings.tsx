@@ -1,5 +1,15 @@
 import React, { FC } from 'react';
-import { SettingsContainer, SettingsHead } from 'styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPalette, faFont } from '@fortawesome/free-solid-svg-icons'
+
+import {
+    SettingsContainer,
+    SettingsHead,
+    SettingsSection,
+    SectionSubTitle,
+    SectionContent,
+    ColorSquare
+} from 'styles';
 
 const Settings: FC = () => {
     return (
@@ -9,8 +19,26 @@ const Settings: FC = () => {
                     <span>Settings</span>
                 </h3>
             </SettingsHead>
-            <div>Colors</div>
-            <div>Typography</div>
+            <SettingsSection>
+                <SectionSubTitle>
+                    <FontAwesomeIcon icon={faPalette} />
+                    <span>Colors</span>
+                </SectionSubTitle>
+                <SectionContent>
+                    <ColorSquare color="red" />
+                    <ColorSquare color="purple" />
+                    <ColorSquare color="green" />
+                    <ColorSquare color="orange" />
+                    <ColorSquare color="yellow" />
+                    <ColorSquare color="tomato" />
+                </SectionContent>
+            </SettingsSection>
+            <SettingsSection>
+                <SectionSubTitle>
+                    <FontAwesomeIcon icon={faFont} />
+                    <span>Typography</span>
+                </SectionSubTitle>
+            </SettingsSection>
         </SettingsContainer>
     );
 };

@@ -10,7 +10,11 @@ export {
 
 export {
     SettingsContainer,
-    SettingsHead
+    SettingsHead,
+    SettingsSection,
+    SectionSubTitle,
+    SectionContent,
+    ColorSquare
 } from './settings';
 
 
