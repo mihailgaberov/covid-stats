@@ -10,8 +10,15 @@ import {
     SectionContent,
     ColorSquare
 } from 'styles';
+import { storeToLocalStorage } from '../../utilities/localStorageService';
 
-const Settings: FC = () => {
+
+const Settings: FC = ({changeTheme}) => {
+    const setColorTheme = (val: string): void => {
+        storeToLocalStorage('color', val);
+        changeTheme();
+    };
+
     return (
         <SettingsContainer>
             <SettingsHead>
@@ -25,7 +32,7 @@ const Settings: FC = () => {
                     <span>Colors</span>
                 </SectionSubTitle>
                 <SectionContent>
-                    <ColorSquare color="red" />
+                    <ColorSquare color="red" onClick={() => setColorTheme('red')} />
                     <ColorSquare color="purple" />
                     <ColorSquare color="green" />
                     <ColorSquare color="orange" />

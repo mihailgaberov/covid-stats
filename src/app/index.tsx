@@ -9,6 +9,10 @@ import { Container, MenuButton, DashboardHead, SectionTitle } from 'styles';
 const App: FC = () => {
     const [settingsOpened, setSettingsOpened] = useState(false);
 
+    const changeTheme = (theme: string): void => {
+        console.log(">>> change theme called from App")
+    };
+
     return (
         <Container className="ashiishme_covid_container">
             <DashboardHead>
@@ -22,7 +26,7 @@ const App: FC = () => {
                     }
                 </MenuButton>
             </DashboardHead>
-            {settingsOpened ? <Settings /> : <Dashboard />}
+            {settingsOpened ? <Settings changeTheme={changeTheme} /> : <Dashboard />}
         </Container>
     );
 };
