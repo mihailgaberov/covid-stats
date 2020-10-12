@@ -10,10 +10,10 @@ import {
     SectionContent,
     ColorSquare
 } from 'styles';
-import { storeToLocalStorage } from '../../utilities/localStorageService';
+import { storeToLocalStorage } from '../../../../services/localStorage.service';
 
 
-const Settings: FC = ({changeTheme}) => {
+const Settings: FC<any> = ({changeTheme}) => {
     const setColorTheme = (val: string): void => {
         storeToLocalStorage('color', val);
         changeTheme();
