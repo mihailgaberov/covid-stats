@@ -16,6 +16,7 @@ export const SettingsSection = styled.div`
   background: ${(props) => props.theme.colors.dark_alpha_01};
   padding: 1em;
   margin: 1em 0;
+  border-radius: 5px;
 `;
 
 export const SectionSubTitle = styled.div`

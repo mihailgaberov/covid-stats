@@ -1,6 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { ThemeContext } from 'styled-components';
 
 import { Dashboard } from './components/popup';
 import { Settings } from './components/popup';
@@ -8,7 +9,10 @@ import { Container, MenuButton, DashboardHead, SectionTitle } from 'styles';
 
 const App: FC = () => {
     const [settingsOpened, setSettingsOpened] = useState(false);
+    const themeContext = useContext(ThemeContext);
 
+    console.log('Current theme: ', themeContext);
+  
     const changeTheme = (theme: string): void => {
         console.log(">>> change theme called from App")
     };

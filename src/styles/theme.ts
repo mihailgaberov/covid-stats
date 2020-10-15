@@ -20,4 +20,12 @@ export default {
             small: '0.8rem',
         },
     },
+    color_theme: {
+        red: {},
+        purple: {},
+        green: {},
+        orange: {},
+        yellow: {},
+        tomato: {},
+    }
 };
