@@ -33,11 +33,11 @@ const Settings: FC<any> = ({changeTheme}) => {
                 </SectionSubTitle>
                 <SectionContent>
                     <ColorSquare color="red" onClick={() => setColorTheme('red')} />
-                    <ColorSquare color="purple" />
-                    <ColorSquare color="green" />
-                    <ColorSquare color="orange" />
-                    <ColorSquare color="yellow" />
-                    <ColorSquare color="tomato" />
+                    <ColorSquare color="purple" onClick={() => setColorTheme('purple')} />
+                    <ColorSquare color="green" onClick={() => setColorTheme('green')} />
+                    <ColorSquare color="orange" onClick={() => setColorTheme('orange')} />
+                    <ColorSquare color="yellow" onClick={() => setColorTheme('yellow')} />
+                    <ColorSquare color="tomato" onClick={() => setColorTheme('tomato')} />
                 </SectionContent>
             </SettingsSection>
             <SettingsSection>

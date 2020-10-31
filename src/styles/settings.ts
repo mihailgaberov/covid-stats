@@ -41,4 +41,5 @@ export const ColorSquare = styled.div`
   margin-right: .3em;
   border-radius: 5px;
   border: 1px solid white;
+  cursor: pointer;
 `;
